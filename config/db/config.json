@@ -1,0 +1,7 @@
+{
+    "host":     "localhost",
+    "user":     "dbadm",
+    "password": "P@ssw0rd",
+    "database": "task_db",
+    "multipleStatements": true
+}
