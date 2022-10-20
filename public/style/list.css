@@ -1,0 +1,69 @@
+.status_title{
+	color: white;
+	background-color: rgba(255, 255, 255, 0.05);
+	justify-content: center;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.list_task{
+	margin-top: 1em;
+}
+
+.list_task_text{
+	margin: 0.5em;
+	color: white;
+}
+
+.list_task_name{
+	border-radius: 50px;
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+	                  linear-gradient(to right, rgba(255, 255, 255, 0.1), #000630);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+
+.list_task_description{
+	text-align: left;
+}
+
+.list_button{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	text-decoration: none;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.list_b_update{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	text-decoration: none;
+	margin: 0;
+	padding: 0.5em;
+
+	border-radius: 50px 0px 0px 50px;
+	border-right: solid #000212 1px;
+}
+
+.list_b_update:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+	color: white;
+}
+
+.list_b_delete{
+	background-color: rgba(118, 0, 0, 0.619);
+	color: white;
+	text-decoration: none;
+	margin: 0;
+	padding: 0.5em;
+
+	border-radius: 0px 50px 50px 0px;
+	border-left: solid #000212 1px;
+}
+
+.list_b_delete:hover{
+	background-color: rgba(118, 0, 0, 0.455);
+	color: white;
+}
+

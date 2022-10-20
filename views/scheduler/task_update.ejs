@@ -1,0 +1,111 @@
+<%- include("header", {title: title}); %>
+
+<div class="container">
+    <div class="row center content">
+        <div class="col-4 center add_form_box">
+            <h2>Add Task</h2>
+
+            <% for (const row of res) { %>
+            <form method="post" action="/real_update/<%= id %>">
+                <div class="row center">
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="tname"
+                            type="text"
+                            name="tname"
+                            value="<%= row.name %>"
+                            placeholder="Task Name">
+                    </div>
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="description"
+                            type="text"
+                            name="description"
+                            value="<%= row.description %>"
+                            placeholder="Description">
+                    </div>
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="eduration"
+                            type="number"
+                            name="eduration"
+                            value="<%= row.e_duration %>"
+                            placeholder="Estimated Duration (Hours)">
+                    </div>
+
+                    <div class="col-12">
+                        <select class="inputfield"
+                            id="category"
+                            name="category">
+                            <option value="<%= row.cat_id %>" selected hidden><%= row.category %></option>
+                            <% for (const row2 of cat) { %>
+                                <option value="<%= row2.id %>">
+                                    <%= row2.name %>
+                                </option>
+                            <% }; %>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <select class="inputfield"
+                            id="status"
+                            name="status">
+                            <option value="<%= row.stat_id %>" selected hidden><%= row.status %></option>
+                            <% for (let i = 1; i < stat.length; i++) { %>
+                                <option value="<%= stat[i].id %>">
+                                    <%= stat[i].name %>
+                                </option>
+                            <% }; %>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row center">
+                            <div class="col-12">
+                                <label class="text" for="date_time">start date</label>
+                            </div>
+                            <div class="col-12">
+                                <input class="inputfield"
+                                    id="start"
+                                    type="date"
+                                    name="start_date"
+                                    value="<%= row.start %>"
+                                    min="<%= row.start %>">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row center">
+                            <div class="col-12">
+                                <label class="text" for="date_time">Deadline</label>
+                            </div>
+                            <div class="col-12">
+                                <input class="inputfield"
+                                    id="deadline"
+                                    type="date"
+                                    name="deadline_date"
+                                    value="<%= row.deadline %>"
+                                    min="<%= row.start %>">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <input class="add_button" 
+                    type="submit"
+                    name="doit"
+                    value="Update">
+
+            </form>
+            <% }; %>
+
+        </div>
+    </div>
+</div>
+
+<%- include("footer"); %>

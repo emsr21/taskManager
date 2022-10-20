@@ -1,0 +1,20 @@
+{
+  "name": "inv_proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:ejs": "ejslint views/scheduler/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "ejs-lint": "^1.2.2",
+    "express": "^4.18.1",
+    "frappe-gantt": "^0.6.1",
+    "promise-mysql": "^5.2.0",
+    "tree": "^0.1.3"
+  }
+}

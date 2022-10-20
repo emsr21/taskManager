@@ -1,0 +1,170 @@
+/* Main */
+/********************************************************/
+body{
+	background-color: #000630;
+}
+
+h2{
+	color: white;
+}
+
+.center{
+	justify-content: center;
+	text-align: center;
+}
+
+.v_center{
+    display: flex;
+    align-items: center;
+}
+
+.left{
+	justify-content: left;
+}
+
+.right{
+	justify-content: right;
+}
+
+.header{
+	color: white;
+	justify-content: center;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.title{
+	color: white;
+}
+
+.nav{
+	justify-content: right;
+	margin: 1em;
+}
+
+.nav_buttons{
+	column-gap: 5px;
+	justify-content: center;
+}
+
+.nav_button{
+	justify-content: center;
+	text-align: center;
+	border-radius: 50px;
+	color: white;
+	text-decoration: none;
+}
+
+.nav_button:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+.selected{
+	background-color: rgba(255, 255, 255, 0.1);	
+}
+
+.nav_text{
+	margin-top:10%;
+}
+
+.add_task_button{
+	justify-content: center;
+	color: white;
+	width: 70%;
+	padding: 0.5em;
+	text-decoration: none;
+	border-radius: 50px;
+}
+
+.add_task_button:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+.add_task_button_text{
+	margin: 0;
+}
+
+.search_box{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: solid rgba(255, 255, 255, 0.1) 2px;
+	border-radius: 0.5rem;
+}
+
+	.search_box::content{
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.search_box:focus{
+		color: white;
+		border-radius: 0.5rem;
+	}
+
+	.search_box::-webkit-input-placeholder{
+		color: white;
+		opacity: 0.5;
+	}
+
+	.search_box:-ms-input-placeholder{
+		color: white;
+		opacity: 0.5;
+	}
+
+	.search_box:-moz-placeholder{
+		color: white;
+		opacity: 0.5;
+	}
+
+	.search_box::-moz-placeholder{
+		color: white;
+		opacity: 0.5;
+	}
+
+/********************************************************/
+
+
+
+
+
+/* Old */
+.text{
+	color: white;
+}
+
+.space_between{
+	justify-content: space-between;
+}
+
+.content{
+	margin-top: 10%;
+}
+
+.add_form_box{
+	padding: 1em;
+	border-radius: 4em;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.inputfield{
+	width: 70%;
+	margin-top: 5px;
+}
+
+.datefield{
+	width: 60%;
+	float: left;
+	margin-top: 5px;
+}
+
+.timefield{
+	width: 40%;
+	float: left;
+	margin-top: 5px;
+}
+
+.add_button{
+	margin-top: 15px;
+	width: 30%;
+}

@@ -1,0 +1,84 @@
+
+<div class="row center">
+    <div class="col-10 header">
+        
+        <div class="row">
+            <div class="col-12">
+                <h1 class="title">
+                    Task Schedular
+                </h1>
+            </div>
+        </div>
+
+        <div class="row nav">
+            
+            <div class="col-2 v_center left">
+                <a class="add_task_button v_center" href="/task/add">
+                    <p class="add_task_button_text">
+                        Add Task
+                    </p>
+                </a> 
+            </div>
+
+            <div class="col-2"></div>
+
+            <div class="col-4">
+                <div class="row nav_buttons">
+                    <% if (nav == "gantt") { %>
+                        <a  class="col-5 nav_button" href="/list">
+                            <p class="nav_text">
+                                list
+                            </p>
+                        </a>
+
+                        <a class="col-5 nav_button selected" href="">
+                            <p class="nav_text">
+                                Gantt
+                            </p>
+                        </a>
+                    <% } %>
+
+                    <% if (nav == "list") { %>
+                        <a  class="col-5 nav_button selected" href="">
+                            <p class="nav_text">
+                                list
+                            </p>
+                        </a>
+
+                        <a class="col-5 nav_button" href="/">
+                            <p class="nav_text">
+                                Gantt
+                            </p>
+                        </a>
+                    <% } %>
+
+                    <% if (nav == "") { %>
+                        <a  class="col-5 nav_button" href="">
+                            <p class="nav_text">
+                                list
+                            </p>
+                        </a>
+
+                        <a class="col-5 nav_button" href="/">
+                            <p class="nav_text">
+                                Gantt
+                            </p>
+                        </a>
+                    <% } %>
+
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-3 v_center">
+                <form method="post" action="/search">
+                    <input class="search_box" type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.gantt-container {
+    width: 100%; 
+    margin: 0 auto;
+    background-color: white;
+}
+
+gantt-container .popup-wrapper {
+    width: 200px;
+    padding: 0 5px;
+}
+
+.details-container {
+    width: 200px;
+    padding: 0 5px;
+}
+
+.gantt .bar {
+    fill: red !important;
+}
+.gantt .bar-progress {
+    fill: yellow !important;
+}
+
+.gantt .bar-label {
+    fill: rebeccapurple !important;
+}
+
+.special .bar {
+    fill: green !important;
+}
+.special .bar-progress {
+    fill: blue !important;
+}
+
+.chart-controls {
+    text-align: center;
+}
+.chart-controls > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.chart-label {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}

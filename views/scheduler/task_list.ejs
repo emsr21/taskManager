@@ -1,0 +1,59 @@
+<%- include("header", {title: title}); %>
+<%- include("navbar", {nav: nav}); %>
+
+<div class="row center">
+    <div class="col-10">
+
+        <% for (const row of stat) { %>
+            <div class="row">
+                <div class="col-12 status_title">
+                    <h3>
+                        <%= row.name %>
+                    </h3>
+                </div>
+            </div>
+
+            
+            <% for (const row2 of res) { %>
+                <% if (row2.stat_id == row.id) { %>
+                    <div class="row list_task">
+
+                        <div class="col-2 list_task_name">
+                            <p class="list_task_text">
+                                <%= row2.name %>
+                            </p>
+                        </div>
+                        <div class="col-4 list_task_description">
+                            <p class="list_task_text">
+                                <%= row2.category %> | <%= row2.description %>
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <p class="list_task_text">
+                                <%= row2.start %> - <%= row2.deadline %>
+                            </p>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="row space_between">
+                                <a class="col-6 list_button list_b_update" href="/task/update/<%= row2.id %>">
+                                    Update
+                                </a>
+                                <a class="col-6 list_button list_b_delete" href="/task/real_delete/<%= row2.id %>">
+                                    Delete
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                <% }; %>
+            <% }; %>
+
+
+        <% }; %>
+
+    </div>
+</div>
+
+
+<%- include("footer"); %>

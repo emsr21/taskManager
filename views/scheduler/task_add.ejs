@@ -1,0 +1,119 @@
+<%- include("header", {title: title}); %>
+
+<div class="container">
+    <div class="row center content">
+        <div class="col-4 center add_form_box">
+            <h2>Add Task</h2>
+
+            <form method="post" action="/real_add">
+                <div class="row center">
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="tname"
+                            type="text"
+                            name="tname"
+                            placeholder="Task Name"
+                            required>
+                    </div>
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="description"
+                            type="text"
+                            name="description"
+                            placeholder="Description"
+                            required>
+                    </div>
+
+                    <div class="col-12">
+                        <input class="inputfield"
+                            id="eduration"
+                            type="number"
+                            name="eduration"
+                            placeholder="Estimated Duration (Hours)"
+                            required>
+                    </div>
+
+                    <div class="col-12">
+                        <select class="inputfield"
+                            id="categorys"
+                            name="category"
+                            required>
+
+                            <option value="" disabled selected hidden>Categorys</option>
+                            <% for (const row of cat) { %>
+                                <option value="<%= row.id %>">
+                                    <%= row.name %>
+                                </option>
+                            <% }; %>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row center">
+                            <div class="col-12">
+                                <label class="text" for="date_time">start date</label>
+                            </div>
+                            <div class="col-12">
+                                <input class="inputfield"
+                                    id="start"
+                                    type="date"
+                                    name="start_date"
+                                    min="<%= date %>"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row center">
+                            <div class="col-12">
+                                <label class="text" for="date_time">Deadline</label>
+                            </div>
+                            <div class="col-12">
+                                <input class="inputfield"
+                                    id="deadline"
+                                    type="date"
+                                    name="deadline_date"
+                                    min="<%= date %>"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <input class="add_button" 
+                    type="submit"
+                    name="doit"
+                    value="Add">
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- 
+<h1>Add your task</h1>
+
+<form method="post" action="/real_add">
+    <fieldset>
+        <legend>Add product</legend>
+
+        <label for="tname">ProduktName</label>
+        <input id="tname" type="text" name="tname" placeholder="ProduktName">
+
+        <label for="price">Price</label>
+        <input id="price" type="number" name="price" placeholder="Price">
+
+        <label for="pdescription">Description</label>
+        <input id="pdescription" type="text" name="pdescription" placeholder="Description">
+
+        <input type="submit" name="doit" value="Add">
+    </fieldset>
+</form>
+ -->
+
+<%- include("footer"); %>
