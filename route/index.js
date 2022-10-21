@@ -24,10 +24,10 @@ router.get('/', async (req, res) => {
     
     for (let i = 0; i < data.res.length; i++) {
         const overdue = helper.date_compare(data.res[i].deadline);
-        console.info(overdue, data.res[i].status);
+        console.info(overdue, data.res[i].name, data.res[i].deadline);
+        console.info(" ");
 
-        if (data.res[i].status != "Complete") {
-            console.info(data.res[i].id)
+        if (overdue && data.res[i].status != "Complete") {
             await task_db.updateTaskStat(data.res[i].id, 1);
         }
     }
@@ -35,7 +35,6 @@ router.get('/', async (req, res) => {
     data.res = await task_db.showTasks();
     data = helper.list_date_format(data);
 
-    console.info(data.res);
     console.info(" ")
 
     res.render("scheduler/task_list", data);

@@ -23,14 +23,18 @@ function list_date_format(data) {
 }
 
 function date_compare(deadline) {
-    const now = new Date().getTime();
-    deadline = new Date(deadline).getTime();
+    const now = new Date().getDate();
+    deadline = new Date(deadline).getDate();
     let overdue;
 
-    if (now <= deadline) {
+    console.info(now, deadline);
+
+    if (now < deadline) {
         overdue = false;
     } else if (now > deadline) {
-        overdue = true
+        overdue = true;
+    } else {
+        overdue = false;
     }
 
     return overdue;
